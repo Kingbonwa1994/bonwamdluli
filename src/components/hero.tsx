@@ -49,14 +49,16 @@ export function Hero() {
             src={heroImage}
             alt="Hero image"
             layout="responsive"
-            width={800}
-            height={600}
+            width={600}
+            height={800}
             objectFit="contain"
             className="object-center rounded-lg"
           />
         </div>
       </div>
+      <div className=" ro">
       <Image src={svgContent} alt="hero" layout="fill" objectFit="cover" className="absolute inset-0" />
+      </div>
     </BackgroundGradientAnimation>
   );
 }

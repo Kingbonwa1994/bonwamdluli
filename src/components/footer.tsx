@@ -15,12 +15,27 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/components/ui/tabs"
+import Link from "next/link"
+
+import {  Sheet,
+  SheetPortal,
+  SheetOverlay,
+  SheetTrigger,
+  SheetClose,
+  SheetContent,
+  SheetHeader,
+  SheetFooter,
+  SheetTitle,
+  SheetDescription} from "@/components/ui/sheet"
 
 export function Footer() {
   return (
-    <Tabs defaultValue="typescript" className=" bg-background w-full">
+    <Tabs defaultValue="typescript" className="w-full">
       <TabsList className="grid w-full grid-cols-4">
-        <TabsTrigger value="account">Nextjs</TabsTrigger>
+        <TabsTrigger value="nextjs"><Sheet><SheetTitle></SheetTitle>Nextjs<SheetTrigger><SheetOverlay>Hifffff</SheetOverlay></SheetTrigger></Sheet></TabsTrigger>
+     
+        
+             
         <TabsTrigger value="reactnative">React_Native</TabsTrigger>
         <TabsTrigger value="typescript">TypeScript</TabsTrigger>
         <TabsTrigger value="otherapps">Other_Apps</TabsTrigger>
