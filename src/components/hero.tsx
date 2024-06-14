@@ -11,23 +11,23 @@ export function Hero() {
       className: "text-red-500 dark:text-red-400",
     },
     {
-      text: "Mdluli",
+      text: " ",
       className: "text-red-300 dark:text-red-200",
     },
     {
-      text: "builds",
+      text: " ",
       className: "text-red-100 dark:text-green-300",
     },
     {
-      text: "with",
+      text: " ",
       className: "text-red-100 dark:text-green-100",
     },
     {
-      text: "React Native",
+      text: " ",
       className: "text-blue-100 dark:text-blue-200",
     },
     {
-      text: "& Nextjs.",
+      text: " ",
       className: "text-blue-400 dark:text-blue-500",
     },
   ];
@@ -39,7 +39,6 @@ export function Hero() {
     <BackgroundGradientAnimation className="my-0 py-0 flex items-center justify-center h-screen">
       <div className="relative z-10 flex flex-col items-center space-y-8">
         <div className=" sm:mt-4 text-3xl">
-          <TypewriterEffectSmooth words={words} />
         </div>
         <div className="">
           <Intro />
@@ -55,10 +54,7 @@ export function Hero() {
             className="object-center rounded-lg"
           />
         </div>
-      </div>
-      <div className=" ro">
-      <Image src={svgContent} alt="hero" layout="fill" objectFit="cover" className="absolute inset-0" />
-      </div>
+      </div> 
     </BackgroundGradientAnimation>
   );
 }

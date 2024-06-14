@@ -1,44 +1,81 @@
-import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
 import {
   Tabs,
-  TabsContent,
   TabsList,
   TabsTrigger,
 } from "@/components/ui/tabs"
-import Link from "next/link"
+import { RiNextjsFill } from "react-icons/ri";
+import { TbBrandReactNative } from "react-icons/tb";
+import { SiTypescript } from "react-icons/si";
+import { RiAppsFill } from "react-icons/ri";
 
-import {  Sheet,
-  SheetPortal,
-  SheetOverlay,
-  SheetTrigger,
-  SheetClose,
-  SheetContent,
-  SheetHeader,
-  SheetFooter,
-  SheetTitle,
-  SheetDescription} from "@/components/ui/sheet"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+
+
+
 
 export function Footer() {
   return (
     <Tabs defaultValue="typescript" className="w-full">
       <TabsList className="grid w-full grid-cols-4">
-        <TabsTrigger value="nextjs"><Sheet><SheetTitle></SheetTitle>Nextjs<SheetTrigger><SheetOverlay>Hifffff</SheetOverlay></SheetTrigger></Sheet></TabsTrigger>
-     
-        
-             
-        <TabsTrigger value="reactnative">React_Native</TabsTrigger>
-        <TabsTrigger value="typescript">TypeScript</TabsTrigger>
-        <TabsTrigger value="otherapps">Other_Apps</TabsTrigger>
+        <TabsTrigger value="nextjs"><Dialog>
+          <DialogTrigger><RiNextjsFill /></DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>These Apps I have built with Nextjs.</DialogTitle>
+              <DialogDescription>
+
+              </DialogDescription>
+            </DialogHeader>
+          </DialogContent>
+        </Dialog>
+        </TabsTrigger>
+        <TabsTrigger value="reactnative">
+          
+          <Dialog>
+          <DialogTrigger><TbBrandReactNative /></DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>These Apps I have built with Nextjs.</DialogTitle>
+              <DialogDescription>
+
+              </DialogDescription>
+            </DialogHeader>
+          </DialogContent>
+        </Dialog>
+        </TabsTrigger>
+        <TabsTrigger value="typescript">
+        <Dialog>
+          <DialogTrigger><SiTypescript /></DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>These Apps I have built with Nextjs.</DialogTitle>
+              <DialogDescription>
+              Leveraging experience with Next.js and React Native , I've honed a development approach that prioritizes a rock-solid backend foundation ️. This is driven by my extensive use of Supabase for type generation ( for those sweet types!), alongside proficiency in tools like Prisma , tRPC 🪄, Drizzle , Appwrite ✨, MongoDB , SQL Structured Query Language for interacting with relational databases like MySQL, PostgreSQL, SQL Server etc. , and PostgreSQL . This approach ensures a well-defined data schema and seamless API integration, leading to efficient and maintainable frontend development for client projects , all within a Backend-as-a-Service (BaaS) paradigm . Bonus: My backend focus has made me a type-safety champion in coding!
+              </DialogDescription>
+            </DialogHeader>
+          </DialogContent>
+        </Dialog>
+        </TabsTrigger>
+        <TabsTrigger value="otherapps">
+        <Dialog>
+          <DialogTrigger><RiAppsFill /></DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>These Apps I have built with Nextjs.</DialogTitle>
+              <DialogDescription>
+
+              </DialogDescription>
+            </DialogHeader>
+          </DialogContent>
+        </Dialog>
+        </TabsTrigger>
       </TabsList>
     </Tabs>
   )

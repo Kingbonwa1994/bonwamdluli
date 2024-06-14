@@ -8,6 +8,7 @@ export const TypewriterEffect = ({
   words,
   className,
   cursorClassName,
+  children,
 }: {
   words: {
     text: string;
@@ -15,6 +16,7 @@ export const TypewriterEffect = ({
   }[];
   className?: string;
   cursorClassName?: string;
+  children?: React.ReactNode;
 }) => {
   // split text inside of words into array of characters
   const wordsArray = words.map((word) => {
@@ -156,7 +158,7 @@ export const TypewriterEffectSmooth = ({
         }}
       >
         <div
-          className="text-sm text-md sm:text-base md:text-xl lg:text:3xl xl:text-5xl font-bold"
+          className="text- text-md sm:text-base md:text-xl lg:text:3xl xl:text-5xl font-bold"
           style={{
             whiteSpace: "nowrap",
           }}
