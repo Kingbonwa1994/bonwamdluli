@@ -38,7 +38,7 @@ export function Hero() {
   return (
     <BackgroundGradientAnimation className="my-0 py-0 flex items-center justify-center h-screen">
       <div className="relative z-10 flex flex-col items-center space-y-8">
-        <div className=" sm:mt-4">
+        <div className=" sm:mt-4 text-3xl">
           <TypewriterEffectSmooth words={words} />
         </div>
         <div className="">

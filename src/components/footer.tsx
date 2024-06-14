@@ -18,12 +18,12 @@ import {
 
 export function Footer() {
   return (
-    <Tabs defaultValue="account" className="w-[400px]">
+    <Tabs defaultValue="typescript" className=" bg-background w-full">
       <TabsList className="grid w-full grid-cols-4">
         <TabsTrigger value="account">Nextjs</TabsTrigger>
-        <TabsTrigger value="password">React_Native</TabsTrigger>
-        <TabsTrigger value="password">TypeScript</TabsTrigger>
-        <TabsTrigger value="password">Other_Apps</TabsTrigger>
+        <TabsTrigger value="reactnative">React_Native</TabsTrigger>
+        <TabsTrigger value="typescript">TypeScript</TabsTrigger>
+        <TabsTrigger value="otherapps">Other_Apps</TabsTrigger>
       </TabsList>
     </Tabs>
   )
