@@ -1,6 +1,7 @@
 import React from "react";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 import Image from "next/image";
+import { Intro } from "./intro";
 
 export function Hero() {
   const svgContent = '/spin.svg';
@@ -8,6 +9,7 @@ export function Hero() {
   return (
     <BackgroundGradientAnimation className="my-0 py-0 flex items-center justify-center h-screen">
        <div className="relative z-10">
+        <Intro />
        <Image
         src={heroImage}
         alt="Hero image"
