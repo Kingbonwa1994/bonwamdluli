@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Intro } from "./intro";
 
 export function Hero() {
+ 
   const svgContent = '/spin.svg';
   const heroImage = '/logs.png';
   return (
