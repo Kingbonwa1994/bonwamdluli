@@ -24,7 +24,7 @@ export function Footer() {
   return (
     <Tabs defaultValue="nextjs" className="w-full flex items-center justify-center">
       <TabsList className="grid w-full grid-cols-4">
-        <TabsTrigger value="nextjs" className="absolute" asChild>
+        <TabsTrigger value="nextjs" className="absolute to-inherit" asChild>
           <Dialog><DialogTrigger><RiNextjsFill /></DialogTrigger>
           <DialogContent>
             <DialogHeader>
