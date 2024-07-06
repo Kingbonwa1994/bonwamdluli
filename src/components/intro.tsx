@@ -6,7 +6,7 @@ import { FlipWordsDemo } from "./FlipWordsDemo";
 export function Intro() {
     
   return (
-    <div className="z-20"> 
+    <div className="z-20 sm:justify-center"> 
         <FlipWordsDemo />
         <Meteors number={90} />
     </div>

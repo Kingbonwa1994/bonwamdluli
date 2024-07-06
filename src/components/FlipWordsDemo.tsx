@@ -1,15 +1,17 @@
 import React from "react";
 import { FlipWords } from "@/components/ui/flip-words";
+import { BiLogoWhatsapp } from 'react-icons/bi'
+
 
 export function FlipWordsDemo() {
-  const words = ["React", "Nextjs", "Native"];
+  const words = ["Typed_React", "Typed_Nextjs", "React_Native"];
 
   return (
     <div className="flex justify-center items-center px-4">
-      <div className="text-4xl mx-auto font-normal text-neutral-900 dark:text-neutral-400">
-        Bonwa Mdluli is
+      <div className="text-4xl mx-auto sm:my-0 font-normal text-neutral-900 dark:text-neutral-400">
+        Get 
         <FlipWords words={words} /> <br />
-        websites with Aceternity UI
+        in weeks <BiLogoWhatsapp className="inline" />
       </div>
     </div>
   );
