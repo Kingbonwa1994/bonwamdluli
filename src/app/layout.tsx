@@ -6,8 +6,11 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const poppins = Poppins({ weight: ["400", "700"], subsets: ["latin"], variable: "--font-poppins" })
 
 export const metadata: Metadata = {
-  title: "Your Name - Portfolio",
-  description: "Full-Stack Engineer Portfolio",
+  title: "Mdluli Bonwa - Portfolio",
+  description: "Software Architect",
+  icons: {
+    icon: "/logs.png",
+  },
 }
 
 export default function RootLayout({
