@@ -8,7 +8,10 @@ export const metadata: Metadata = {
   title: 'Bonwa Mdluli Portfolio',
   description: 'Software Architect specializing in launching startups with cutting-edge technologies',
 }
-//add metadata cariable
+//twitter card image
+export const openGraph = {
+  images: '/images/og-image.png',
+}
 
 export default function RootLayout({
   children,
