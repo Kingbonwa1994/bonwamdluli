@@ -30,7 +30,7 @@ export default function PortfolioHomepage() {
       backgroundColor: ['#f0e7db', '#e6d8c3', '#f0e7db'],
       transition: { duration: 5, repeat: Infinity, ease: 'linear' }
     })
-  }, [])
+  }, [colorAnimation])
 
   const handleCommand = () => {
     const command = input.trim().toLowerCase() as Command;
