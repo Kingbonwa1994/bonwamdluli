@@ -1,9 +1,9 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, SetStateAction } from 'react'
 import { motion, useAnimation } from 'framer-motion'
-import { useTypewriter } from '../utils/useTypewriter'
-import { useJitter } from '../utils/useJitter'
+import { useTypewriter } from '@/utils/useTypewriter'
+import { useJitter } from '@/utils/useJitter'
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet"
@@ -13,7 +13,7 @@ import { FaAws, FaFacebookF, FaInstagram, FaWhatsapp, FaLinkedinIn, FaGithub, Fa
 import { FaXTwitter, FaThreads } from 'react-icons/fa6'
 import { MdEmail } from 'react-icons/md'
 
-type Command = 'about' | 'skills' | 'projects' | 'contact' | 'webapps' | 'nativeapps';
+type Command = 'about' | 'skills' | 'projects' | 'contact' | 'webapps' | 'nativeapps'  | 'help';
 
 export default function PortfolioHomepage() {
   const typewriterText = useTypewriter("Welcome to Bonwa Mdluli's portfolio...", 100)
@@ -29,7 +29,7 @@ export default function PortfolioHomepage() {
       backgroundColor: ['#f0e7db', '#e6d8c3', '#f0e7db'],
       transition: { duration: 5, repeat: Infinity, ease: 'linear' }
     })
-  }, [])
+  }, [colorAnimation])
 
   const handleCommand = () => {
     const command = input.trim().toLowerCase() as Command;
@@ -125,9 +125,9 @@ export default function PortfolioHomepage() {
               </SheetDescription>
             </SheetHeader>
             <div className="mt-4">
-              <p>Email: bonwa@example.com</p>
+              <p>Email: bonwamdluli@gmail.com</p>
               <p>LinkedIn: linkedin.com/in/bonwamdluli</p>
-              <p>GitHub: github.com/bonwamdluli</p>
+              <p>GitHub: github.com/Kingbonwa1994</p>
             </div>
           </>
         );
@@ -195,9 +195,9 @@ export default function PortfolioHomepage() {
         <div className="container mx-auto flex justify-center space-x-4">
           {[
             { Icon: FaXTwitter, href: 'https://twitter.com/yourusername', color: '#1DA1F2' },
-            { Icon: FaFacebookF, href: 'https://facebook.com/yourusername', color: '#4267B2' },
+            { Icon: FaFacebookF, href: 'https://facebook.com/mdlulik', color: '#4267B2' },
             { Icon: FaInstagram, href: 'https://instagram.com/yourusername', color: '#E1306C' },
-            { Icon: FaWhatsapp, href: 'https://wa.me/yournumber', color: '#25D366' },
+            { Icon: FaWhatsapp, href: 'https://wa.me/+27659505243', color: '#25D366' },
             { Icon: FaLinkedinIn, href: 'https://linkedin.com/in/yourusername', color: '#0077B5' },
             { Icon: FaGithub, href: 'https://github.com/yourusername', color: '#333' },
             { Icon: FaThreads, href: 'https://threads.net/@yourusername', color: '#000000' },
@@ -237,15 +237,15 @@ export default function PortfolioHomepage() {
               <span className="animate-blink">|</span>
             </h1>
             <div className="font-mono">
-              <p className="mb-2">&gt; Enter a command (type 'help' for available commands):</p>
+              <p className="mb-2">&gt; Enter a command (type &apos;help&apos; for available commands):</p>
               <div className="flex items-center space-x-2">
                 <span className="mr-2">&gt;</span>
                 <div className="flex-grow bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 p-[2px] rounded-md">
                   <Input
                     type="text"
                     value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                    onKeyPress={(e) => e.key === 'Enter' && handleCommand()}
+                    onChange={(e: { target: { value: SetStateAction<string> } }) => setInput(e.target.value)}
+                    onKeyPress={(e: { key: string }) => e.key === 'Enter' && handleCommand()}
                     className="w-full bg-white"
                   />
                 </div>
