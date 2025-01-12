@@ -8,8 +8,8 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet"
 import { ScrollArea } from "@/components/ui/scroll-area"
-import { SiTypescript, SiNextdotjs, SiReact, SiExpo, SiMongodb, SiPostgresql, SiPayloadcms } from 'react-icons/si'
-import { FaAws, FaFacebookF, FaInstagram, FaWhatsapp, FaLinkedinIn, FaGithub, FaDiscord } from 'react-icons/fa'
+import { SiTypescript, SiNextdotjs, SiReact, SiExpo, SiPayloadcms } from 'react-icons/si'
+import { FaFacebookF, FaInstagram, FaWhatsapp, FaLinkedinIn, FaGithub, FaDiscord } from 'react-icons/fa'
 import { FaXTwitter, FaThreads } from 'react-icons/fa6'
 import { MdEmail } from 'react-icons/md'
 import { SkillsCenter } from '@/components/SkillsCenter'
