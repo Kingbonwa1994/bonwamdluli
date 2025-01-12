@@ -1,9 +1,9 @@
 'use client'
 
-import { useState, useEffect, SetStateAction } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion'
-import { useTypewriter } from '@/utils/useTypewriter'
-import { useJitter } from '@/utils/useJitter'
+import { useTypewriter } from '../utils/useTypewriter'
+import { useJitter } from '../utils/useJitter'
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet"
@@ -12,8 +12,9 @@ import { SiTypescript, SiNextdotjs, SiReact, SiExpo, SiMongodb, SiPostgresql, Si
 import { FaAws, FaFacebookF, FaInstagram, FaWhatsapp, FaLinkedinIn, FaGithub, FaDiscord } from 'react-icons/fa'
 import { FaXTwitter, FaThreads } from 'react-icons/fa6'
 import { MdEmail } from 'react-icons/md'
+import { SkillsCenter } from '@/components/SkillsCenter'
 
-type Command = 'about' | 'skills' | 'projects' | 'contact' | 'webapps' | 'nativeapps'  | 'help';
+type Command = 'about' | 'skills' | 'projects' | 'contact' | 'webapps' | 'nativeapps';
 
 export default function PortfolioHomepage() {
   const typewriterText = useTypewriter("Welcome to Bonwa Mdluli's portfolio...", 100)
@@ -29,7 +30,7 @@ export default function PortfolioHomepage() {
       backgroundColor: ['#f0e7db', '#e6d8c3', '#f0e7db'],
       transition: { duration: 5, repeat: Infinity, ease: 'linear' }
     })
-  }, [colorAnimation])
+  }, [])
 
   const handleCommand = () => {
     const command = input.trim().toLowerCase() as Command;
@@ -70,24 +71,8 @@ export default function PortfolioHomepage() {
                 Bonwa&apos;s expertise in various technologies
               </SheetDescription>
             </SheetHeader>
-            <div className="mt-4 grid grid-cols-4 gap-4">
-              {[
-                { Icon: SiTypescript, name: 'TypeScript', color: '#007ACC' },
-                { Icon: SiNextdotjs, name: 'Next.js', color: '#000000' },
-                { Icon: SiReact, name: 'React', color: '#61DAFB' },
-                { Icon: SiExpo, name: 'Expo', color: '#000020' },
-                { Icon: SiMongodb, name: 'MongoDB', color: '#47A248' },
-                { Icon: SiPostgresql, name: 'PostgreSQL', color: '#336791' },
-                { Icon: FaAws, name: 'AWS', color: '#FF9900' },
-                { Icon: SiPayloadcms, name: 'PayloadCMS', color: '#000000' },
-              ].map((skill) => (
-                <div key={skill.name} className="flex flex-col items-center">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
-                    <skill.Icon className="text-3xl" style={{ color: skill.color }} />
-                  </div>
-                  <span className="mt-2 text-sm text-white">{skill.name}</span>
-                </div>
-              ))}
+            <div className="mt-6">
+              <SkillsCenter />
             </div>
           </>
         );
@@ -125,9 +110,9 @@ export default function PortfolioHomepage() {
               </SheetDescription>
             </SheetHeader>
             <div className="mt-4">
-              <p>Email: bonwamdluli@gmail.com</p>
+              <p>Email: bonwa@example.com</p>
               <p>LinkedIn: linkedin.com/in/bonwamdluli</p>
-              <p>GitHub: github.com/Kingbonwa1994</p>
+              <p>GitHub: github.com/bonwamdluli</p>
             </div>
           </>
         );
@@ -187,22 +172,22 @@ export default function PortfolioHomepage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-black text-white">
+    <div className="min-h-screen flex flex-col bg-black text-[hsl(var(--text-off-white))]">
       <header className="p-4" style={{
-        background: 'linear-gradient(135deg, #FF4500, #FF0000, #1E90FF)',
+        background: 'linear-gradient(135deg, #000000, #FF0000, #000000)',
         boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
       }}>
         <div className="container mx-auto flex justify-center space-x-4">
           {[
-            { Icon: FaXTwitter, href: 'https://twitter.com/yourusername', color: '#1DA1F2' },
+            { Icon: FaXTwitter, href: 'https://x.com/BonwaMdluli', color: '#1DA1F2' },
             { Icon: FaFacebookF, href: 'https://facebook.com/mdlulik', color: '#4267B2' },
-            { Icon: FaInstagram, href: 'https://instagram.com/yourusername', color: '#E1306C' },
+            { Icon: FaInstagram, href: 'https://www.instagram.com/mdluliekingbonwa/', color: '#E1306C' },
             { Icon: FaWhatsapp, href: 'https://wa.me/+27659505243', color: '#25D366' },
             { Icon: FaLinkedinIn, href: 'https://linkedin.com/in/yourusername', color: '#0077B5' },
-            { Icon: FaGithub, href: 'https://github.com/yourusername', color: '#333' },
+            { Icon: FaGithub, href: 'https://github.com/Kingbonwa1994', color: '#333' },
             { Icon: FaThreads, href: 'https://threads.net/@yourusername', color: '#000000' },
             { Icon: FaDiscord, href: 'https://discordapp.com/users/youruserid', color: '#7289DA' },
-            { Icon: MdEmail, href: 'mailto:your@email.com', color: '#D44638' },
+            { Icon: MdEmail, href: 'mailto:bonwamdlulu@gmail.com', color: '#D44638' },
           ].map(({ Icon, href, color }, index) => (
             <a key={index} href={href} target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
               <Icon size={24} color={color} />
@@ -236,17 +221,18 @@ export default function PortfolioHomepage() {
               {typewriterText}
               <span className="animate-blink">|</span>
             </h1>
-            <div className="font-mono">
-              <p className="mb-2">&gt; Enter a command (type &apos;help&apos; for available commands):</p>
+            <div className="font-mono text-[hsl(var(--text-off-white))]">
+              <p className="mb-2">&gt; Enter a command (type 'help' for available commands):</p>
               <div className="flex items-center space-x-2">
                 <span className="mr-2">&gt;</span>
                 <div className="flex-grow bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 p-[2px] rounded-md">
                   <Input
                     type="text"
                     value={input}
-                    onChange={(e: { target: { value: SetStateAction<string> } }) => setInput(e.target.value)}
-                    onKeyPress={(e: { key: string }) => e.key === 'Enter' && handleCommand()}
-                    className="w-full bg-white"
+                    onChange={(e) => setInput(e.target.value)}
+                    onKeyPress={(e) => e.key === 'Enter' && handleCommand()}
+                    className="w-full bg-black text-[hsl(var(--text-off-white))] border-none focus:ring-0 placeholder-gray-500"
+                    placeholder="Enter command..."
                   />
                 </div>
                 <Button onClick={handleCommand}>Execute</Button>
@@ -256,7 +242,7 @@ export default function PortfolioHomepage() {
           </div>
         </motion.div>
         <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
-          <SheetContent className="bg-gradient-to-br from-gray-900 to-black" style={{background: 'var(--card-gradient)'}}>
+          <SheetContent className="bg-gradient-to-br from-gray-900 to-black text-[hsl(var(--text-off-white))]" style={{background: 'var(--card-gradient)'}}>
             <div className="bg-black bg-opacity-50 h-full overflow-auto rounded-lg p-6">
               {renderSheetContent()}
             </div>
