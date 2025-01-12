@@ -14,7 +14,7 @@ import { FaXTwitter, FaThreads } from 'react-icons/fa6'
 import { MdEmail } from 'react-icons/md'
 import { SkillsCenter } from '@/components/SkillsCenter'
 
-type Command = 'about' | 'skills' | 'projects' | 'contact' | 'webapps' | 'nativeapps';
+type Command = 'about' | 'skills' | 'projects' | 'contact' | 'webapps' | 'nativeapps' | 'help';
 
 export default function PortfolioHomepage() {
   const typewriterText = useTypewriter("Welcome to Bonwa Mdluli's portfolio...", 100)
